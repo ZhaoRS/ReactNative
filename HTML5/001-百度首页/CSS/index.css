@@ -1,0 +1,115 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: url("../img/bg.jpg");
+}
+a{
+    color: black;
+}
+
+/*头部*/
+#header{
+    background-color: rgba(0,0,0,0.2);
+    /*右对齐*/
+    text-align: center;
+    /*设置高度*/
+    height: 44px;
+    /*行高*/
+    line-height: 44px;
+    margin-bottom: 50px;
+}
+#header a{
+    /*设置字体*/
+    font-style: 13px;
+    /*加粗*/
+    font-weight: bolder;
+    /*右边间隔*/
+    margin-right: 8px;
+    /*文字颜色*/
+    color: white;
+}
+/*内容*/
+#content{
+    /*居中*/
+    text-align: center;
+}
+#content .top-content{
+    margin-bottom: 10px;
+}
+#content .top-content img {
+    width: 270px;
+    height: 129px;
+}
+#content .mi-content{
+    background-color: rebeccapurple;
+    width: 600px;
+    height: 38px;
+    /*居中*/
+    margin: 0 auto;
+    /*内容靠左*/
+    text-align: left;
+}
+
+#content .mi-content input{
+    width: 500px;
+    height: 100%;
+    /*让边距往里走*/
+    box-sizing: border-box;
+    /*内边距*/
+    padding-left: 10px;
+    font-size: 16px;
+}
+#content .mi-content input:focus{
+    /*去除外边线*/
+    outline:none;
+    border:1px solid #3385ff;
+}
+
+#content .mi-content a{
+    /*设置背景颜色*/
+    background-color: #3385ff;
+    text-decoration: none;
+    color: white;
+    /*修改标签类型*/
+    display: inline-block;
+    width: 100px;
+    height: 38px;
+    /*浮动在右边*/
+    float: right;
+    /*水平垂直居中*/
+    text-align: center;
+    line-height:38px;
+}
+.quick-search {
+
+}
+.quick-search img{
+    width: 100px;
+    height: 90px;
+    /*设置外边距*/
+    margin: 20px 10px;
+}
+.quick-search img:hover {
+    /*设置不透明*/
+    opacity: 0.2;
+}
+/*w尾部*/
+#footer{
+    position: fixed;
+    bottom:0;
+    widows:100%;
+    /*内容居中*/
+    text-align: center;
+    padding: 30px;
+}
+.footer-top{
+    margin-bottom: 5px;
+}
+#footer a{
+    margin: 0 5px;
+    font-size: 14px;
+}
+
+
