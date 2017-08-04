@@ -1,0 +1,168 @@
+
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    background: url("../img/pattern.gif");
+    font-family: BebasNeue-webfont;
+}
+@font-face {
+    src:url('../font/BebasNeue-webfont.ttf');
+    font-family: 'BebasNeue-webfont';
+}
+a{
+    /*文字颜色*/
+    color: white;
+    /*出去下划线*/
+    text-decoration: none;
+}
+#header{
+    background-color: red;
+    height: 3px;
+    margin-bottom: 150px;
+}
+
+#nav{
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    top:0;
+    background-color: rgba(0,0,0,0.2);
+    /*background-color: black;*/
+}
+#nav ul, #nav ul li{
+    display: inline-block;
+}
+#nav ul li a{
+    /*改变类型*/
+    display: inline-block;
+    width: 200px;
+    height: 45px;
+    /*垂直居中*/
+    line-height: 45px;
+    /*设置文字大小*/
+    font-size: 35px;
+    /*间距*/
+    margin:0 8px;
+}
+#nav ul li a.selected,#nav ul li a:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+}
+
+/*中间list*/
+#list{
+    background-color: white;
+    margin-top: 10px;
+    /*居中显示内容*/
+    text-align: center;
+}
+
+#list .love{
+    text-align: left;
+    margin: 30px;
+    width: 382px;
+    /*改变类型*/
+    display: inline-block;
+}
+#list .love a{
+    background-color: orangered;
+    /*display: inline-block;*/
+    width: 120px;
+    height: 35px;
+    font-size: 24px;
+    border-radius: 5px;
+    /*居中*/
+    text-align: center;
+    line-height: 35px;
+}
+#list .love a:hover{
+    background-color: black;
+}
+#list .love p{
+    font-family: sans-serif;
+    margin: 7px 0;
+    /*首航缩进*/
+    text-indent: 30px;
+}
+
+/*尾部布局*/
+#footer{
+    text-align: center;
+}
+#footer h2{
+    color: white;
+    margin: 8px 0;
+}
+#footer ul, #footer ul li{
+    display: inline-block;
+}
+#footer ul li img:hover{
+    /*蒙版效果*/
+    opacity: 0.2;
+}
+
+
+
+
+/*自适应性布局*/
+@media screen and (max-width: 1095px){
+    #header{
+        margin-bottom: 130px;
+    }
+
+    #nav ul li a{
+        width: 150px;
+    }
+
+}
+
+@media screen and (max-width: 890px){
+    #header{
+        margin-bottom: 110px;
+    }
+    #nav ul li a{
+        width: 120px;
+        font-size: 28px;
+    }
+    #list .love{
+        width: 280px;
+    }
+    #list .love img{
+        width: 280px;
+    }
+}
+
+@media screen and (max-width: 690px){
+    #header{
+        margin-bottom: 90px;
+    }
+    #nav ul li a{
+        width: 100px;
+        font-style: 25px;
+    }
+    #list .love{
+        width: 382px;
+    }
+    #list .love img {
+        width: 382px;
+    }
+}
+
+
+@media screen and (max-width: 600px){
+    #header{
+        margin-bottom: 70px;
+    }
+    #nav ul li a{
+        width: 60px;
+        font-size: 20px;
+    }
+    #list .love{
+        width: 350px;
+    }
+    #list .love img{
+        widows: 350px;
+    }
+}
