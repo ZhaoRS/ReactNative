@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS的基本数据类型</title>
+    <script type="text/javascript">
+
+        //弹框输出
+        alert('Hello world');
+        alert('还是 Hello world');
+        //调试输出
+        console.log('你好。。嘿嘿嘿');
+        //基本数据类型
+        var age = 10;
+        var  height = 174;
+        var name ='Ranthen';
+            name2 = 'rose';
+        var result = true;
+        var score = null;
+        //1.1制定类型变量
+//        var carName = String();
+        var carName = new String;
+        console.log(carName);
+
+        //字符串拼接
+        var newName = name + '-' + name2;
+        console.log(newName);
+
+        //3练习
+        var str1 = 10 + 10 + '10'; //2010
+        var str2 = '10' + 10 + 10; //101010;
+        var str3 = (10 + '10') + 10; //101010
+        var  str4 ='10' + (10 + 10); //1020
+        var str5 = '10' + (10 + 10 + '10')//102010
+
+        console.log(age, height, result, score, name);
+        console.log(typeof age, typeof height, typeof result, typeof score, typeof name);
+
+        4.数组
+        var arr = [];
+        arr.push(20, 10.5, 'ZRS',['啊哦','18']);
+        console.log(arr);
+        //遍历数组
+        for (var i = 0; i < arr.length; i++) {
+            console.log(arr[i]);
+        }
+        // for in 注意 JS中 for in拿到的是角标
+        for(var i in arr) {
+            console.log(arr[i]);
+        }
+        //Math库
+        var numbers = [10, 6, -21, 55, 999];
+        //输出最大值
+        console.log(Math.max.apply(this, numbers));
+        //最小值
+        console.log(Math.min.apply(this, numbers));
+
+
+
+
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>
