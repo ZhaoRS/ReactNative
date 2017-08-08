@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS中构造函数</title>
+    <script type="text/javascript">
+        //创建构造函数  抽象
+        var Dog = function () {
+            this.name = null;
+            this.age = null;
+            this.dogFriends = [];
+            this.eat = function (someThing) {
+                console.log(this.name + '吃' + someThing);
+            }
+            this.run = function (someWhere) {
+                console.log(this.name + '跑' + someWhere);
+            }
+        }
+
+        //带参数的构造函数
+        var Dog = function (name, age, dogFriends, height) {
+            this.name = name;
+            this.age = age;
+            this.dogFriends = dogFriends
+            this.eat = function (someThing) {
+                console.log(this.name + '吃' + someThing);
+            }
+            this.run = function (someWhere) {
+                console.log(this.name + '跑' + someWhere);
+            }
+        }
+
+        //普通函数调用
+        Dog();
+        // alloc init ----> new
+        var dog1 = new Dog();
+        dog1.name = 'ahuang';
+        dog1.age = 5;
+
+        var dog2 = new Dog();
+        dog2.dogFriends = ['wangcai', 'ahua'];
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
