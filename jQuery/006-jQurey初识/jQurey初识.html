@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>认识jQuery</title>
+    
+    <!--
+        JS存在的问题
+        1.浏览器兼容性问题
+        2.存在复杂的dom操作
+        3.复杂的特效和动画效果
+        4.请求网络数据存在跨域问题
+        
+        jQuery优势
+        1.机会不存在浏览器兼容问题
+        2.轻松实现dom操作和特效动画的实现
+        3.多种方式的网络请求
+    -->
+</head>
+<body>
+
+    <div id="main">
+        <div class="word">
+            <p>我是一段文字</p>
+            <p>我是一段文字</p>
+            <p>我是一段文字</p>
+            <p>我是一段文字</p>
+            <p>我是一段文字</p>
+        </div>
+        
+        <div class="pic">
+            <img src="imgs/img_01.jpg">
+            <img src="imgs/img_02.jpg">
+            <img src="imgs/img_03.jpg">
+            <img src="imgs/img_04.jpg">
+            <img src="imgs/img_05.jpg">
+        </div>
+
+        <button>显示</button>
+        <button>隐藏</button>
+        <button>切换</button>
+        
+    </div>
+
+    <!--引用jQuery类库-->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script>
+        //1.jQuery对象 $()
+        //2.拿到word标签
+        $('#main .word');
+        //3.查看拿到标签中的属性
+        console.log($('.word').attr('class'));
+        //4.修改拿到的标签中的属性
+        $('img').attr({alt:'图片加载失败', width:'100px'});
+        //5.查看标签中的内容
+        console.log($('p').text());
+        //6.修改标签内容
+        $('p').text('我是ZRS');
+        //7.事件
+        $('button').eq(0).on('click',function () {
+            $('p').hide();
+            $('img').show();
+        })
+        $('button').eq(1).on('click', function () {
+            $('p').hide();
+            $('img').hide();
+        })
+        //7.2切换
+        $('button').eq(2).on('click',function () {
+            $('p').toggle(2000);
+            $('img').toggle(2000);
+        })
+        //遍历
+        var datas = [10,15,20,45,198,897,3];
+        $.each(datas,function (index value) {
+            console.log(index,value);
+        });
+        //9.取出对应的下标
+        console.log($.inArray(3,datas))
+                    function indexF(value) {
+                        for(i = 0; i<datas.length;i++){
+                            if(value == datas[i]){
+                                return i;
+                            }
+                        }
+                    }
+                    console.log(indexF(45));
+        //10写css
+        $('.word').css({
+            background:'width',
+            border:'1px solid green'
+        });
+    </script>
+</body>
+</html>

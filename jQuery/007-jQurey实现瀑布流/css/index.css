@@ -2,13 +2,10 @@
     margin: 0;
     padding: 0;
 }
-#main{
-    /*position: relative;*/
-    -webkit-column-width: 202px;
-    -moz-column-width: 202px;
-    column-width: 202px;
-}
 
+#main{
+    position: relative;
+}
 .box{
     /*内边距*/
     padding: 15px 0 0 15px;
