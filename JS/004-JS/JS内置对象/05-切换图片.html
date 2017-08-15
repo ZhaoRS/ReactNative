@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>切换图片</title>
+</head>
+<body>
+    <img src="image/icon_01.png" class="icon">
+    <p></p>
+    <button>上一张</button>
+    <button>下一张</button>
+
+    <script type="text/javascript">
+        //全局变量
+        var minIndex = 1;
+        var maxIndex = 9;
+        var currentIndex = minIndex;
+
+        //拿到标签
+        var img = document.getElementsByClassName('icon')[0];
+        var pre = document.getElementsByTagName('button')[0];
+        var next = document.getElementsByTagName('button')[1];
+
+        //监听按钮的点击
+        //上一张
+        pre.onclick = function () {
+            if (currentIndex == minIndex) {
+                currentIndex = maxIndex;
+            } else  {
+                currentIndex --;
+            }
+            img.src = 'image/icon_0'+ currentIndex +'.png';
+        }
+        next.onclick = function () {
+            if (currentIndex == maxIndex) {
+                currentIndex = minIndex;
+            } else {
+                currentIndex ++;
+                console.log(currentIndex);
+            }
+            img.src = 'image/icon_0'+ currentIndex +'.png';
+        }
+
+    </script>
+
+</body>
+</html>

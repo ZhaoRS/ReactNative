@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内置对象-window</title>
+    <script type="text/javascript">
+        //第一个作用
+        //1.1所有的全局变量都是window的属性
+        //2.2所有的全局函数都是window的方法
+
+        //全局变量
+        var age = 17;
+        function dog() {
+            var age = 18;//局部变量
+        }
+        console.log(age);
+
+        function Person() {
+            console.log(this);
+        }
+//        Person();
+        new Person();
+        //第二个作用
+        //1.动态跳转
+        alert(0);
+        window.location.href = 'http://www.baidu.com';
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

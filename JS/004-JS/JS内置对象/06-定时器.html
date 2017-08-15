@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定时器</title>
+    <style>
+        body{
+            background-color: black;
+            text-align: center;
+            margin-top: 10px;
+        }
+        div{
+            color: red;
+            font-size: 150px;
+        }
+        img{
+            display: none;
+        }
+        p{
+            display: none;
+            color: red;
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="image/flower.gif" id="icon">
+    <p id="word">爱如潮水</p>
+    <div id="number">4</div>
+
+    <script type="text/javascript">
+        //1.拿到标签
+        var img = document.getElementById('icon');
+        var word = document.getElementById('word');
+        var number = document.getElementById('number');
+        //2.定时器
+        var timer = setInterval(function () {
+//            number.innerText -= 1;
+            var num = Number(number.innerText);
+            num -- ;
+            number.innerText = num;
+            console.log(number.innerText);
+            if (number.innerText == 0){
+                //清除定时器
+                clearInterval(this.timer);
+                //隐藏number
+                number.style.display = 'none';
+                //显示
+                word.style.display = 'block';
+                img.style.display = 'inline-block';
+            }
+        },400);
+    </script>
+</body>
+</html>
